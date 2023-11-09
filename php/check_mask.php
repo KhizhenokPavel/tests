@@ -17,6 +17,11 @@ foreach ($result as $phoneMask) {
     $count  = strlen(preg_replace('/[^\d]/','',$checkPhoneMask));
 
     for ($i = $count; $i < strlen($editPhoneNumber); $i++) $editPhoneNumber[$i] = '#';
+
+    if ($editPhoneNumber === $checkPhoneMask) {
+        header("Location: /index.php?message=Введённый вами номер принадлежит стране " . $phoneMask->name_ru);
+        exit;
+    }
 }
 
 header("Location: /index.php?message=Введённый вами номер не принадлежит известным странам");
