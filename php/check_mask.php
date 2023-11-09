@@ -13,6 +13,10 @@ foreach ($result as $phoneMask) {
 
     $checkPhoneMask = $phoneMask->mask;
     $checkPhoneMask = str_replace(array(" ", "+", "-", "(", ")"), '', $checkPhoneMask);
+
+    $count  = strlen(preg_replace('/[^\d]/','',$checkPhoneMask));
+
+    for ($i = $count; $i < strlen($editPhoneNumber); $i++) $editPhoneNumber[$i] = '#';
 }
 
 header("Location: /index.php?message=Введённый вами номер не принадлежит известным странам");
