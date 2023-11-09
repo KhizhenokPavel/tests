@@ -90,6 +90,35 @@ body {
     margin-top: 40px;
 }
 
+.big-ellipse {
+    width: 726px;
+    height: 160px;
+    transform: rotate(19deg);
+    transform-origin: top left;
+    border-radius: 363px/80px;
+    border: 3px solid #6C508A;
+    position: absolute;
+    top: 309px;
+    left: -155px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.little-ellipse {
+    border: 3px solid #6C508A;
+    border-radius: 191px/48px;
+    position: absolute;
+    top: 130px;
+    left: 193px;
+    opacity: 0.08;
+    width: 382px;
+    height: 96px;
+    transform: rotate(-33.593deg);
+    transform-origin: bottom left;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
 @media (max-width: 560px) {
     .image-container {
         width: 100%;
@@ -141,5 +170,13 @@ body {
 
     .banner-items-list + .banner-button {
         margin-top: 24px;
+    }
+
+    .big-ellipse {
+        display: none;
+    }
+
+    .little-ellipse {
+        display: none;
     }
 }
