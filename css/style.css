@@ -77,3 +77,69 @@ body {
 .banner-button:hover {
     background: #a983d5;
 }
+
+.banner-list__item + .banner-list__item {
+    margin-top: 10px;
+}
+
+.banner-container-title + .banner-items-list {
+    margin-top: 22px;
+}
+
+.banner-items-list + .banner-button {
+    margin-top: 40px;
+}
+
+@media (max-width: 560px) {
+    .image-container {
+        width: 100%;
+        border-radius: 0;
+        background-image: url("/src/img/mobile_banner_image.png");
+        background-size: 100% auto;
+        background-position: bottom;
+    }
+
+    .banner-info-container {
+        padding: 32px 0 0 0;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+        max-width: 760px;
+        position: relative;
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 15px 77px 15px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .banner-container-title {
+        font-size: 20px;
+    }
+
+    .banner-list__item {
+        font-size: 14px;
+    }
+
+    .banner-list__item + .banner-list__item {
+        margin-top: 8px;
+    }
+
+    .banner-button {
+        font-size: 16px;
+        padding: 10px 40px;
+    }
+
+    .banner-container-title + .banner-items-list {
+        margin-top: 16px;
+    }
+
+    .banner-items-list + .banner-button {
+        margin-top: 24px;
+    }
+}
