@@ -1,1 +1,1 @@
-<?php include "html/banner.php";
+<?php include "html/banner.php"; ?>
