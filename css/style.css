@@ -1,0 +1,10 @@
+.image-container {
+    background-image: url("/src/img/banner_image.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    max-width: 878px;
+    border-radius: 48px 0 0 48px;
+}

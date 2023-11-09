@@ -1,12 +1,12 @@
 <?php include "components/start.php"; ?>
 
-    <section class="banner-section">
+    <section class="banner-section position-relative">
         <div class="big-ellipse"></div>
         <div class="little-ellipse"></div>
         <div class="container">
             <div class="row">
-                <div class="image-container"></div>
-                <div class="banner-info-container">
+                <div class="image-container col-10 position-absolute"></div>
+                <div class="banner-info-container col-8">
                     <h1 class="banner-container-title">Fulfillment dla Twojego e-Commerce</h1>
                     <ul class="banner-items-list">
                         <li class="banner-list__item">Przyjęcie i magazynowanie produktów</li>
