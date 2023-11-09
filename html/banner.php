@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="image-container col-10 position-absolute"></div>
                 <div class="banner-info-container col-8">
-                    <h1 class="banner-container-title">Fulfillment dla Twojego e-Commerce</h1>
+                    <h1 class="banner-container-title">Fulfillment dla Twojego <br>e-Commerce</h1>
                     <ul class="banner-items-list">
                         <li class="banner-list__item">Przyjęcie i magazynowanie produktów</li>
                         <li class="banner-list__item">Kompletacja i pakowanie</li>
