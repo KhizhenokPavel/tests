@@ -6,5 +6,5 @@
         </div>
         <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
-    <div class="result-container"><?= $_GET['message'] ?></div>
+    <div class="result-container"><?php if (isset($_GET['message'])) echo $_GET['message']; ?></div>
 </div>
