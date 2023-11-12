@@ -1,7 +1,9 @@
-<?php include "html/components/start.php"; ?>
+<?php require_once 'php/helper.php' ?>
 
-<?php include "html/banner.php"; ?>
-<?php include "html/form.php"; ?>
-<?php include "html/cookies_popup.php"; ?>
+<?php view('components.start') ?>
 
-<?php include "html/components/end.php"; ?>
+<?php view('banner') ?>
+<?php view('form') ?>
+<?php view('cookies_popup') ?>
+
+<?php view('components.end') ?>

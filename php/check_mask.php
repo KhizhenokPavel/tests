@@ -1,27 +1,14 @@
 <?php
-$phoneNumber = $_POST['phoneNumber'];
+require_once "helper.php";
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://cdn.jsdelivr.net/gh/andr-04/inputmask-multi@master/data/phone-codes.json');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$result = curl_exec($ch);
-$result = json_decode($result);
-curl_close($ch);
+$phone = $_POST['phoneNumber'];
 
-foreach ($result as $phoneMask) {
-    $editPhoneNumber = str_replace(array(" ", "+", "-", "(", ")"), '', $phoneNumber);
+if (!validate($phone, 'required|min:3|max:20')) return "Проверьте введённый вами номер.";
 
-    $checkPhoneMask = $phoneMask->mask;
-    $checkPhoneMask = str_replace(array(" ", "+", "-", "(", ")"), '', $checkPhoneMask);
+$result = checkPhoneMask($_POST['phoneNumber']);
 
-    $count  = strlen(preg_replace('/[^\d]/','',$checkPhoneMask));
+$message = 'Вы ввели неверный номер, либо он не принадлежит известным нам странам.';
 
-    for ($i = $count; $i < strlen($editPhoneNumber); $i++) $editPhoneNumber[$i] = '#';
+if ($result) $message = "Введённый вами номер принадлежит стране $result";
 
-    if ($editPhoneNumber === $checkPhoneMask) {
-        header("Location: /index.php?message=Введённый вами номер принадлежит стране " . $phoneMask->name_ru);
-        exit;
-    }
-}
-
-header("Location: /index.php?message=Введённый вами номер не принадлежит известным странам");
+redirect("/index.php", ['message' => $message]);

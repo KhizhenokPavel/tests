@@ -1,5 +1,5 @@
 <!doctype html>
 <html lang="ru">
-<?php include "head.php"; ?>
+<?php view('components.head') ?>
 <body>
-<?php include "header.php"; ?>
+<?php view('components.header') ?>
