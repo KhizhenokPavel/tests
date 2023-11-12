@@ -11,4 +11,4 @@ $message = 'Вы ввели неверный номер, либо он не пр
 
 if ($result) $message = "Введённый вами номер принадлежит стране $result";
 
-redirect("/index.php", ['message' => $message]);
+redirect("/", ['message' => $message]);
